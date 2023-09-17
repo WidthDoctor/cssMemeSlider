@@ -1,0 +1,122 @@
+body{
+    background: url('./assets/хакеры-hackers.gif');
+    background-size: 20%;
+    padding: 2rem;
+}
+.container{
+    max-width: 62.5rem;
+    height: 44.5rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    padding: 2.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+    animation: backgroundAnimation 0.3s linear infinite;
+    background-size: 200% 200%;
+    background-image: linear-gradient(45deg,  #00ff00, #ff00d0, #ebff0b);
+}
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.slider{
+    height: 44.5rem;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+    width: 500%;
+    height: 90%;
+}
+.slide{
+    width: 20%;
+    transition: all 0.2s ease;
+}
+.s1{
+    transition: all 0.2s ease;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ddd;
+    font-size: 2rem;
+    padding-left: 0.3rem;
+    margin-top: 1.8rem;
+}
+.footer{
+    margin-top: 2rem;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.button{
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.3rem;
+    background-color: #eb1e1e;
+    opacity: 0.5;
+    border-radius: 55%;
+    transition: all 0.4s ease;
+}
+.button:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+    background-color: #17d7f9;
+}
+
+input[name="r"]{
+    display: none;
+}
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+@media screen and (max-width: 768px){
+    .container{
+        height: 30rem;
+    }
+    .slider{
+        height: 30rem;
+    }
+    .slides{
+        height: 20rem;
+    }
+    .slide img{
+        height: 100%;
+    }
+    .title{
+        margin-top: 7rem;
+        font-size: 1.5rem;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top:  3.1rem;
+    }
+    .button{
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
+    }
+}
